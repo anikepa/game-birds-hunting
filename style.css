@@ -1,0 +1,168 @@
+   * {
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+   }
+
+   html,
+   body {
+
+       height: 100vh;
+       width: 100vw;
+   }
+
+   #main {
+
+       cursor: url(./OIP-removebg-preview.png), pointer;
+       overflow: hidden;
+       height: 100vh;
+       width: 100vw;
+
+   }
+
+   #main::-webkit-scrollbar {
+       display: none;
+   }
+
+   #main::before {
+       content: "";
+       display: block;
+       position: fixed;
+       height: 100vh;
+       width: 100vw;
+       z-index: 1;
+       background-image: url("./360_F_357117060_yV3A2INxBDKlab5KSEHFUEtzokb5IiJ6.jpg");
+       background-size: cover;
+       background-position: center;
+   }
+
+   /*   .clos{
+    width:100%;
+    height:20%;
+    display: flex;
+     
+ 
+}
+.cl {
+    margin-left:20px;
+    height:50px;
+    left:-10%;
+    width:90px;
+ position: relative;
+  animation:  apj 2s linear  infinite   both;
+
+}
+ @keyframes  apj {
+   0%{
+  transform: translate(-100%);
+   }   
+ } */
+   .duck {
+       cursor: all-scroll;
+   }
+
+   .duck:nth-last-of-type(1) {
+       animation: duckfly 10s linear 2s infinite;
+
+
+   }
+
+   .duck:nth-last-of-type(2) {
+       animation: duckfly 10s linear 2s infinite;
+
+   }
+
+   .duck:nth-last-of-type(3) {
+       animation: duckfly 10s linear 2s infinite;
+   }
+
+   .duck:nth-last-of-type(4) {
+       animation: duckfly 12s linear 2s infinite;
+   }
+
+   .duck:nth-last-of-type(5) {
+       animation: duckfly 15s linear 2s infinite;
+
+   }
+
+   @keyframes duckfly {
+       0% {
+           left: 150%;
+           top: 10%;
+       }
+
+       25% {
+           left: 80%;
+           top: 50%;
+       }
+
+       50% {
+           left: 50%;
+           top: 30%;
+       }
+
+       75% {
+           left: 40%;
+           top: 30%;
+       }
+
+       100% {
+           left: -50%;
+           top: 10%;
+       }
+   }
+
+   input+label {
+       position: absolute;
+       left: -100px;
+       z-index: 1;
+       width: 152px;
+       height: 90px;
+       display: block;
+       z-index: 5;
+       transform: translate(-50%, -50%);
+       background-image: url("./images__3_-removebg-preview.png");
+
+       background-size: cover;
+       background-position: center;
+   }
+
+   input:checked+label {
+       opacity: 0;
+       transition: 0.5s;
+       transform: rotate(120deg);
+       transform-origin: 60%;
+       z-index: -5;
+   }
+
+   /* experement */
+
+   .score {
+       position: absolute;
+       top: 93%;
+       height: 50px;
+       line-height: 50px;
+       background-color: rgba(0, 0, 0, 0.689);
+       width: 100vw;
+       z-index: 3;
+       text-align: center;
+       font-size: 2.5vw;
+       color: white;
+   }
+
+   .score::after {
+       content: counter(score);
+       display: inline-block;
+
+   }
+
+   .score::before {
+       content: "Score :";
+       display: inline-block;
+       margin-left: 10px;
+
+   }
+
+   input:checked {
+       counter-increment: score;
+   }
